@@ -1,12 +1,8 @@
 <script setup lang="ts">
-import service from './utils/request'
-const dj=()=>{
-  const jj= service.request({
-    url:'/plist',
-    method:'get'
-  })
-  console.log(jj);
-  
+import { aaa } from './api/test';
+const dj=async ()=>{
+  const res = await aaa();
+  console.log(res);
 }
 
 
