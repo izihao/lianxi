@@ -14,7 +14,7 @@ const dynamicRoutes:RouteRecordRaw[]=[
         component:()=>import('../views/index/index.vue'),
         meta:{
           title:'首页',
-          icon:'muns',
+          icon:'House',
           cache:false,
           hidden:false,
         }
@@ -25,7 +25,7 @@ const dynamicRoutes:RouteRecordRaw[]=[
         redirect:'/system/menu',
         meta:{
           title:'系统管理',
-          icon:'menu',
+          icon:'Setting',
           cache:false,
           hidden:false,
         },
@@ -47,7 +47,7 @@ const dynamicRoutes:RouteRecordRaw[]=[
             component:()=>import('../views/system/systemrole.vue'),
             meta:{
               title:'角色管理',
-              icon:'menu',
+              icon:'IceCream',
               cache:false,
               hidden:false,
             }
@@ -58,7 +58,7 @@ const dynamicRoutes:RouteRecordRaw[]=[
             component:()=>import('../views/system/systemuser.vue'),
             meta:{
               title:'用户管理',
-              icon:'menu',
+              icon:'User',
               cache:false,
               hidden:false,
             }
@@ -71,7 +71,7 @@ const dynamicRoutes:RouteRecordRaw[]=[
         redirect:'/goods/list',
         meta:{
           title:'商品管理',
-          icon:'menu',
+          icon:'ShoppingBag',
           cache:false,
           hidden:false,
         },
@@ -82,7 +82,7 @@ const dynamicRoutes:RouteRecordRaw[]=[
             component:()=>import('../views/goods/goodslist.vue'),
             meta:{
               title:'商品列表',
-              icon:'menu',
+              icon:'GoodsFilled',
               cache:false,
               hidden:false,
             }
@@ -93,7 +93,7 @@ const dynamicRoutes:RouteRecordRaw[]=[
             component:()=>import('../views/goods/goodscategory.vue'),
             meta:{
               title:'商品分类',
-              icon:'menu',
+              icon:'Operation',
               cache:false,
               hidden:false,
             }
@@ -106,7 +106,7 @@ const dynamicRoutes:RouteRecordRaw[]=[
         redirect:'/mengxuegu/mengxuegu',
         meta:{
           title:'梦学谷',
-          icon:'menu',
+          icon:'Link',
           cache:false,
           hidden:false,
         },
@@ -117,7 +117,7 @@ const dynamicRoutes:RouteRecordRaw[]=[
             component:()=>import('../views/mengxuegu/mengxuegu.vue'),
             meta:{
               title:'梦学谷官网',
-              icon:'menu',
+              icon:'Link',
               cache:true,
               hidden:true,
             }
@@ -130,7 +130,7 @@ const dynamicRoutes:RouteRecordRaw[]=[
         redirect:'/401/401',
         meta:{
           title:'关于',
-          icon:'menu',
+          icon:'Warning',
           cache:false,
           hidden:false,
         },
@@ -141,7 +141,7 @@ const dynamicRoutes:RouteRecordRaw[]=[
             component:()=>import('../views/401/401.vue'),
             meta:{
               title:'401',
-              icon:'menu',
+              icon:'Warning',
               cache:true,
               hidden:true,
             }

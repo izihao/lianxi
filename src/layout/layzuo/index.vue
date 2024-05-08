@@ -1,49 +1,71 @@
 <template>
     <div class="zuo">
         <img src="http://vue3.mengxuegu.com/assets/logo-8ba32897.png" alt="">
-        <span>
+        <span v-show="!store.collapse">
             积云-vue3全家桶项目
         </span>
 
     </div>
     <div class="box">
-        <el-menu active-text-color="#ffd04b" background-color="#545c64" class="el-menu-vertical-demo" text-color="#fff"
-            router :default-active="$route.path" :default-openeds="['/system']">
+        <el-menu :collapse="store.collapse" active-text-color="#ffd04b" background-color="transparent"
+            class="el-menu-vertical-demo" text-color="#fff" router :default-active="$route.path"
+            :default-openeds="['/system']">
             <el-menu-item index="/home">
-                <el-icon><icon-menu /></el-icon>
+                <el-icon>
+                    <HomeFilled />
+                </el-icon>
                 <span>首页</span>
             </el-menu-item>
             <el-sub-menu index="/system">
                 <template #title>
                     <el-icon>
-                        <location />
+                        <Setting />
                     </el-icon>
                     <span>系统管理</span>
                 </template>
                 <el-menu-item-group>
-                    <el-menu-item index="/system/menu">菜单管理</el-menu-item>
-                    <el-menu-item index="/system/role">角色管理</el-menu-item>
-                    <el-menu-item index="/system/user">用户管理</el-menu-item>
+                    <el-menu-item index="/system/menu">
+                        <svgicon icon="Menu"></svgicon>
+                        菜单管理
+                    </el-menu-item>
+                    <el-menu-item index="/system/role">
+                        <svgicon icon="IceCream"></svgicon>
+                        角色管理
+                    </el-menu-item>
+                    <el-menu-item index="/system/user">
+                        <svgicon icon="User"></svgicon>
+                        用户管理
+                    </el-menu-item>
                 </el-menu-item-group>
             </el-sub-menu>
             <el-sub-menu index="/goods">
                 <template #title>
                     <el-icon>
-                        <location />
+                        <ShoppingBag />
                     </el-icon>
                     <span>商品管理</span>
                 </template>
                 <el-menu-item-group>
-                    <el-menu-item index="/goods/list">商品列表</el-menu-item>
-                    <el-menu-item index="/goods/category">商品分类</el-menu-item>
+                    <el-menu-item index="/goods/list">
+                        <svgicon icon="GoodsFilled"></svgicon>
+                        商品列表
+                    </el-menu-item>
+                    <el-menu-item index="/goods/category">
+                        <svgicon icon="Operation"></svgicon>
+                        商品分类
+                    </el-menu-item>
                 </el-menu-item-group>
             </el-sub-menu>
             <el-menu-item index="/mengxuegu/mengxuegu">
-                <el-icon><icon-menu /></el-icon>
+                <el-icon>
+                    <Link />
+                </el-icon>
                 <span>梦学古官网</span>
             </el-menu-item>
             <el-menu-item index="/401/401">
-                <el-icon><icon-menu /></el-icon>
+                <el-icon>
+                    <Warning />
+                </el-icon>
                 <span>401页面</span>
             </el-menu-item>
         </el-menu>
@@ -53,7 +75,8 @@
 
 <script lang="ts" setup>
 import { ref, reactive } from "vue";
-
+import { uselayout } from '@/stores/layout'
+const store = uselayout()
 </script>
 
 <style lang="scss">
@@ -61,7 +84,7 @@ import { ref, reactive } from "vue";
     width: 100%;
     height: 100vh;
     display: flex;
-    background-color: skyblue;
+    // background-color: skyblue;
     height: 50px;
     align-items: center;
     justify-content: center;
