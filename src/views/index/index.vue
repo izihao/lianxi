@@ -1,10 +1,7 @@
+<script lang="ts" setup name="Home"></script>
+
 <template>
-  首页
+  <div>home</div>
 </template>
 
-<script lang="ts" setup>
-import { ref, reactive } from "vue";
-
-</script>
-
-<style lang="scss" scoped></style>
+<style scoped lang="scss"></style>

@@ -1,15 +1,18 @@
+import { createApp } from "vue";
+import pinia from "./stores/index";
+import "./styles/index.scss";
 
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-import '../src/style/index.scss'
-import App from './App.vue'
-import router from './router'
-import { globals } from '../src/glboal/index'
-const app = createApp(App)
-app.use(globals)
-app.use(createPinia())
-app.use(router)
+import App from "./App.vue";
+import router from "./router";
 
-app.mount('#app')
+import { setRegisterGlobal } from "./global";
 
-console.log(import.meta.env.VITE_APP_BASE_API);
+import "./permission";
+
+const app = createApp(App);
+app.use(setRegisterGlobal);
+
+app.use(pinia);
+app.use(router);
+
+app.mount("#app");
