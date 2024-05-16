@@ -1,6 +1,10 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import rolelist from './role/rolelist.vue'
+</script>
 <template>
-  <div>role</div>
+  <div>
+    <rolelist></rolelist>
+  </div>
 </template>
 
 <style scoped lang="scss"></style>
